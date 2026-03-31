@@ -1,0 +1,113 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Lucida Sans', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    body {
+        background: blanchedalmond;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem 2rem;
+        gap: 2rem;
+        color: #132439;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    #input-label {
+        font-weight: 600;
+        font-size: 1rem;
+    }
+
+    header input {
+        border: 1px solid #132439;
+        border-radius: 16px;
+        padding: 0.5rem 1rem;
+        width: 280px;
+        font-size: 1rem;
+        outline: none;
+        transition: all 0.3s ease;
+    }
+
+    header input:focus {
+        border-color: #4b8cf5;
+        box-shadow: 0 0 5px rgba(75, 140, 245, 0.5);
+    }
+
+    /* Genre Section - New Layout */
+    .genre-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+        width: 100%;
+        max-width: 900px;
+    }
+
+    /* Genre Cards - New Style */
+    .genre-section a {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        text-decoration: none;
+        color: #fff;
+        padding: 1rem 2rem;
+        border-radius: 30px;
+        background-color: cornflowerblue;
+        box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+        transition: all 0.3s ease;
+        min-width: 200px;
+    }
+
+    .genre-section a:nth-child(odd) {
+        transform: translateY(0);
+    }
+
+    .genre-section a:nth-child(even) {
+        transform: translateY(20px); /* staggered effect */
+    }
+
+    .genre-section a:hover {
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+        background-color: #4169e1;
+    }
+
+    .genre-section img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .genre-section p {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    /* Responsive */
+    @media(max-width: 600px){
+        .genre-section {
+            flex-direction: column;
+            align-items: center;
+        }
+        .genre-section a {
+            transform: translateY(0) !important;
+            width: 80%;
+            justify-content: flex-start;
+        }
+    }

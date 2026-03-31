@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'result.css' %}">
+</head>
+<body>
+    <div class="result">
+    <header class="username">USERNAME</header>
+    <main>
+        <div>
+        <p class="result-details">You scored: <span id="user_score"> 40</span></p>
+        <p class="result-details">Genre: <span id="chose_genre"> games</span></p>
+        <p class="result-details">Rank: <span id="obtained_rank"> 34th</span></p>
+        </div>
+    </main>
+    </div>
+    <button id="home-redirect" onclick="
+        window.location.href = `/`;
+    ">
+    <h3>Back To Home</h3>
+    </button>
+<script>
+    function loadResult() {
+        const points = sessionStorage.getItem("score") || 0;
+        const category = sessionStorage.getItem("genre") || "Unknown";
+        const username = sessionStorage.getItem("username") || "Player";
+
+        let rank = "Beginner";
+        if (points >= 50) rank = "Expert";
+        else if (points >= 30) rank = "Intermediate";
+
+        document.querySelector(".username").textContent = username;
+        document.getElementById("user_score").textContent = points;
+        document.getElementById("chose_genre").textContent = category;
+        document.getElementById("obtained_rank").textContent = rank;
+    }
+
+    loadResult();
+</script>
+</body>
+</html>

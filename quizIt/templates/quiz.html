@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'Quiz.css' %}">
+</head>
+<body>
+    <div class="header"><img src="https://imgs.search.brave.com/xOLuwaVBVuDjqQAVktx2N28QQdQYDjyUcwyM4KQdMmM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cG5ncGxheS5jb20v/d3AtY29udGVudC91/cGxvYWRzLzgvVmlk/ZW8tR2FtZS1Eb3du/bG9hZC1GcmVlLVBO/Ry5wbmc" alt=""
+        height="53px" width="60px" class="genre-image"></div>
+    <main>
+        <div class="question"><h1>What is the capital of Nepal?</h1></div>
+        <div class="answers-container">
+        <p id="questions_record"><span id="current_question">x</span> questions out of 
+            <span id="total_question">y</span></p>
+        <div class="answers">
+            <div class="answer">Dhulikhel</div>
+            <div class="answer">Kathmandu</div>
+            <div class="answer">Panchkhal</div>
+            <div class="answer">Bhaktapur</div>
+        </div>
+        </div>
+    </main>
+    <script src="{% static 'quiZ.js' %}"></script>
+</body>
+</html>

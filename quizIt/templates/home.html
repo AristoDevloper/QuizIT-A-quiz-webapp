@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+</head>
+<body>
+    <header>
+        <h1>QuizIt</h1>
+        <p>Start quiz, have fun and learn more</p>
+    </header>
+
+
+    <main>
+        <a href="{% url 'genres' %}">
+            <h3 class="glow-box">Get started</h3>
+        </a>
+        
+        
+    </main>
+
+    <footer><div class="upper-footer">
+        <a href="{% url 'aboutpage' %}">
+            <p>About</p>
+        </a>
+        <a href="">
+            <p>Feedback</p>
+        </a>
+        <a href="">
+            <p>Quickstart</p>
+        </a>
+        </div>
+
+        
+        <h4>Contact us on:</h4>
+        <div class="lower-footer">
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="{% static 'facebook.png' %}" alt="Facebook" width="40" height="40">
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="{% static 'instagram (1).png' %}" alt="Instagram" width="40" height="40">
+        </a>
+        <a href="https://www.twitter.com" target="_blank">
+            <img src="{% static 'twitter.png' %}" alt="Twitter" width="40" height="40">
+        </a>
+        </div>
+    </footer>
+</body>
+</html>

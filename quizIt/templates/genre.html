@@ -1,0 +1,38 @@
+{% load static %}
+<html>
+    <head>
+        <title>Genres</title>
+        <link rel="stylesheet" href="{% static 'genres.css' %}">
+    </head>
+<body>
+<header>
+    <h2>Choose Your Quiz Genre</h2>
+    <label for="username" id="input-label">Your Name:</label>
+    <input type="text" name="username" id="username" placeholder="Enter your name">
+</header>
+
+<main class="genre-section">
+    <a href="#" class="genre" id="games">
+        <img src="https://imgs.search.brave.com/xOLuwaVBVuDjqQAVktx2N28QQdQYDjyUcwyM4KQdMmM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cG5ncGxheS5jb20v/d3AtY29udGVudC91/cGxvYWRzLzgvVmlk/ZW8tR2FtZS1Eb3du/bG9hZC1GcmVlLVBO/Ry5wbmc" alt="Games">
+        <p>Games</p>
+    </a>
+    <a href="#" class="genre" id="history">
+        <img src="https://imgs.search.brave.com/SdixIs-fepxp5sOADExwerJWtDwrPiej7IUIQHDqYq0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNDg3/MTQ1OTI0L3Bob3Rv/L2RpY3Rpb25hcnkt/c2VyaWVzLWhpc3Rv/cnkuanBnP3M9NjEy/eDYxMiZ3PTAmaz0y/MCZjPWxtdlRIUGlj/dUdRTzlnbGo0c3U1/RTlyTHo1UVBKQVRa/V0ZtcHlfbUN6bTg9" alt="History">
+        <p>History</p>
+    </a>
+    <a href="#" class="genre" id="programming">
+        <img src="https://imgs.search.brave.com/2_mFtEFichEy_tPmaT0VYxl2J5nptx6t_MnMSwCKyhE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMucGV4ZWxzLmNv/bS9waG90b3MvNTc0/MDY5L3BleGVscy1w/aG90by01NzQwNjku/anBlZz9hdXRvPWNv/bXByZXNzJmNzPXRp/bnlzcmdiJmRwcj0x/Jnc9NTAw" alt="Programming">
+        <p>Programming</p>
+    </a>
+    <a href="#" class="genre" id="astronomy">
+        <img src="https://imgs.search.brave.com/CSJDMPYOxda2Cmfi8ZL3popqJHiW9-vbORx2cSozYO8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS12ZWN0b3Iv/YXN0cm9ub215LWlz/b21ldHJpYy1pbGx1/c3RyYXRpb25fMTI4/NC01NzQwOC5qcGc_/c2VtdD1haXNfaHli/cmlkJnc9NzQwJnE9/ODA" alt="Astronomy">
+        <p>Astronomy</p>
+    </a>
+    <a href="#" class="genre" id="sports">
+        <img src="https://imgs.search.brave.com/0MryazJlk49Xa-Wmsi6S2c5maij1ToO-Kaq5Ilmh2mE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZnJlZXBuZ2xvZ29z/LmNvbS91cGxvYWRz/L3Nwb3J0LXBuZy9z/cG9ydC1zcG9ydHMt/bWFuYWdlbWVudC1h/c2Itb25saW5lLTM0/LnBuZw" alt="Sports">
+        <p>Sports</p>
+    </a>
+</main>
+    <script src="{% static 'genre.js' %}"></script>
+</body>
+</html>
