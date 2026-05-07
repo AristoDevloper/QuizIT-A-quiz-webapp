@@ -27,7 +27,8 @@ SECRET_KEY = 'django-insecure-zpy(4^=p=z59kfoidthguk=q()wy(b!=lb9qdo885*x=h&p=jt
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "quizit-a-quiz-webapp-1.onrender.com"
+    "quizit-a-quiz-webapp-1.onrender.com",
+    "127.0.0.1"
 ]
 
 
@@ -78,11 +79,20 @@ WSGI_APPLICATION = 'quizIt.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+import dj_database_url
+
+# from dotenv import load_dotenv
+# load_dotenv()
+
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.parse(os.getenv("DB_URL"))
 }
 
 

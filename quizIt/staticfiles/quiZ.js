@@ -65,6 +65,7 @@ function checkAnswer(clickedDiv, selected, correct) {
         if (div.textContent === correct) {
             div.classList.add("correct");
             score+=5;
+            console.log('Its active');
         }
     });
 
@@ -82,7 +83,6 @@ function checkAnswer(clickedDiv, selected, correct) {
             // Save result data
             sessionStorage.setItem("score", score);
             sessionStorage.setItem("genre", selectedGenre);
-            sessionStorage.setItem("username", "Aryan Danuwar"); // later dynamic
 
             // Redirect to result page
             window.location.href = "/resultPage/";
